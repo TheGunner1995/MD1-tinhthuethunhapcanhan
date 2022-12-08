@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+<b>Thu nhập 1 tháng </b><br><br>
+<input id="thunhap" type="text"><br><br>
+<button onclick="tinhThue()">Tính thuế</button><br><br>
+<b id="thue"></b>
+<script>
+  function tinhThue(){
+    let thunhap = +document.getElementById('thunhap').value
+    let bac1 = thunhap
+    let bac2 = thunhap * 0.05
+    let bac3 = thunhap * 0.1
+    let bac4 = thunhap * 0.15
+    let bac5 = thunhap * 0.2
+    let bac6 = thunhap * 0.25
+    let bac7 = thunhap * 0.3
+    let bac8 = thunhap * 0.35
+    if (thunhap <= 4000000){
+      document.getElementById('thue').innerHTML = 'Tien thue phai nop: ' + bac1
+    }else {
+      if (thunhap <= 6000000){
+        document.getElementById('thue').innerHTML = 'Tien thue phai nop: ' + bac2
+      }else {
+        if (thunhap <= 9000000){
+          document.getElementById('thue').innerHTML = 'Tien thue phai nop: ' + bac3
+        }else {
+          if (thunhap <= 14000000){
+            document.getElementById('thue').innerHTML = 'Tien thue phai nop: ' + bac4
+          }else {
+            if (thunhap <= 24000000){
+              document.getElementById('thue').innerHTML = 'Tien thue phai nop: ' + bac5
+            }else {
+              if (thunhap <= 44000000){
+                document.getElementById('thue').innerHTML = 'Tien thue phai nop: ' + bac6
+              }else {
+                if (thunhap <= 84000000){
+                  document.getElementById('thue').innerHTML = 'Tien thue phai nop: ' + bac7
+                }else {
+                  document.getElementById('thue').innerHTML = 'Tien thue phai nop: ' + bac8
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+</script>
+</body>
+</html>
